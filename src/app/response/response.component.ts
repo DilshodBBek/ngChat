@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-response',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./response.component.css']
 })
 export class ResponseComponent {
+  responseText!:string
+  historyComingMessages:string[]=[];
 
+  @Input() comingText!:string
+  @Output() OnResponseReply=new EventEmitter<string>();
+  EventInvokeMethod(event:Event){
+    this.OnResponseReply.emit(this.responseText);
+  }
 }

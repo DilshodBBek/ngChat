@@ -1,1 +1,15 @@
-<p>send works!</p>
+
+<div style="border: 3px solid red;">
+<input type="text" [(ngModel)]="sendtext">
+{{ResponseComponentText}}
+<br>
+<app-response [comingText]="sendtext" (OnResponseReply)="getRespose($event)">
+
+</app-response>
+
+<!-- <ul *ngFor="let item of historyComingMessages">
+  <li>
+    {{item}}
+  </li>
+</ul> -->
+</div>

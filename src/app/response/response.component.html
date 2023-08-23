@@ -1,1 +1,10 @@
-<p>response works!</p>
+<div style="border: 3px solid green; margin-top: 100px;">
+<input type="text" [(ngModel)]="responseText" (keydown)="EventInvokeMethod($event)">
+
+<h3>{{comingText}}</h3>
+<!-- <ul *ngFor="let item of historyComingMessages">
+  <li>
+    {{item}}
+  </li>
+</ul> -->
+</div>
